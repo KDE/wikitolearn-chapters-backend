@@ -1,0 +1,14 @@
+version: '3'
+services:
+  persistence-chapters-app:
+    build: ./src/
+    ports:
+    - "9030:9030"
+  persistence-chapters-mongodb:
+    image: "mongo:3.4"
+    volumes:
+    - persistence-chapters-mongodb-configdb:/data/configdb
+    - persistence-chapters-mongodb-db:/data/db
+volumes:
+  persistence-chapters-mongodb-configdb:
+  persistence-chapters-mongodb-db:
