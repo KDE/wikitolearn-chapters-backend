@@ -1,11 +1,11 @@
 version: '3'
 services:
-  persistence-chapters-app:
+  chapters-backend:
     build:
       context: ./src/
       args:
         SERVICE_PORT: ${SERVICE_PORT}
-    image: wikitolearn/chapters
+    image: wikitolearn/chapters-backend
     ports:
     - "${SERVICE_PORT}:${SERVICE_PORT}"
     environment:

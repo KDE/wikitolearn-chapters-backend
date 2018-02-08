@@ -1,10 +1,10 @@
-version: '3'
+version: '3.4'
 services:
-  persistence-chapters-mongodb:
+  chapters-backend-mongodb:
     image: "mongo:3.4"
     volumes:
-    - persistence-chapters-mongodb-configdb:/data/configdb
-    - persistence-chapters-mongodb-db:/data/db
+    - chapters-backend-mongodb-configdb:/data/configdb
+    - chapters-backend-mongodb-db:/data/db
 volumes:
-  persistence-chapters-mongodb-configdb:
-  persistence-chapters-mongodb-db:
+  chapters-backend-mongodb-configdb:
+  chapters-backend-mongodb-db:
